@@ -1,19 +1,13 @@
 ---
-title: "Portfolio Work 2"
+title: ""
 date: 2023-06-06T09:49:18+05:30
-summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. "
+summary: "An application to monitor the 👨‍👩‍👧‍👦 family members, both location and mobile activity ..."
 include_footer: true
 ---
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium.
+An application to monitor the 👨‍👩‍👧‍👦 family members, both location and mobile activity was required. These requirements were not a problem, since we have experience using the 🗺️ Maps and 📌 GPS functionality in Android and iOS. The client also required 🗝️ federated authentication using third party providers, which we solved by integrating to Google Auth.
 
-> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium.
+<img src="https://i.imgur.com/H79GC79.jpg" alt= “” width="320">   <img src="https://i.imgur.com/yJi5bv4.jpg" alt= “” width="320">   <img src="https://i.imgur.com/LKjc0Nu.jpg" alt= “” width="320">
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium.
+<img src="https://i.imgur.com/3aNSp4M.jpg" alt= “” width="320">   <img src="https://i.imgur.com/ud0rJVF.jpg" alt= “” width="320">   <img src="https://i.imgur.com/IKWSf48.jpg" alt= “” width="320">
 
-```python
-    print("Hello World")
-    response = input()
-```
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat accusamus recusandae nihil corrupti, ex ipsa? Ab minima fugit ad praesentium.
