@@ -76,15 +76,16 @@ languages:
                   url: /#how-we-work
                 - title: Testimonials
                   url: /#testimonials
+                - title: Sign up
+                  url: /
+                  button: true
                 - title: Language
                   sublinks:
                       - title: English
                         url: /
                       - title: Spanish
                         url: /es
-                - title: Sign up
-                  url: /
-                  button: true
+
             # sidebar:
             #     # Logo (from /images/logos/___.svg)
             #     logo: fresh-square
@@ -290,27 +291,33 @@ languages:
                       url: https://bulma.io/
             # Customizable navbar. For a dropdown, add a "sublinks" list.
             navbar:
-                - title: Hogar
+                - title: Inicio
                   url: /es
                 - title: Blog
                   url: /es/blog/
                 - title: portafolio
                   url: /es/#portfolio
+
                 - title: Cómo trabajamos
                   url: /es/#how-we-work
+
                 - title: Testimonios
                   url: /es/#testimonials
+                - title: Sign up
+                  url: /
+                  button: true
                 - title: Idioma
                   sublinks:
                       - title: English
                         url: /
                       - title: Spanish
                         url: /es
+
                 # - title: Log in
                 #   url: /
-                - title: Sign up
-                  url: /
-                  button: true
+                # - title: Sign up
+                #   url: /
+                #   button: true
             # sidebar:
             #     # Logo (from /images/logos/___.svg)
             #     logo: fresh-square

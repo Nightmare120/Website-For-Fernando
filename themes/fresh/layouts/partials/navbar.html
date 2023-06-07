@@ -84,9 +84,22 @@ $navbarLogoHeight := .Site.Params.navbarlogo.height | default 28 }}
             {{- end }}
 
             <div class="navbar-end">
-                {{- range $navbar }} {{- if .sublinks }}
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link"> {{ .title }} </a>
+                {{- range $navbar }} {{- if .button }}
+                <span id="signup"
+                    ><a href="{{ .url }}" class="navbar-item"
+                        ><span
+                            class="button signup-button rounded secondary-btn raised"
+                        >
+                            {{ .title }}
+                        </span>
+                    </a></span
+                >
+                {{- else if .sublinks }}
+                <div
+                    style="min-width: 180px"
+                    class="navbar-item has-dropdown is-hoverable"
+                >
+                    <a id="lang" class="navbar-link"> {{ .title }} </a>
 
                     <div class="navbar-dropdown">
                         {{- range .sublinks }}
@@ -99,84 +112,8 @@ $navbarLogoHeight := .Site.Params.navbarlogo.height | default 28 }}
                             {{ .title }}
                         </span>
                         {{- end }}
-                        <script>
-                            let english = document.getElementById("English");
-                            let Spanish = document.getElementById("Spanish");
-
-                            let changeLanguage = (code) => {
-                                sessionStorage.setItem("language", code);
-                                console.log("click");
-                                let url = "";
-                                if (code == "es") {
-                                    if (
-                                        window.location.pathname.includes("es")
-                                    ) {
-                                        url = `${window.location.origin}${window.location.pathname}`;
-                                    } else {
-                                        url = `${window.location.origin}/${code}${window.location.pathname}`;
-                                    }
-
-                                    console.log("url: ", url);
-                                } else if (code == "en") {
-                                    if (
-                                        window.location.pathname.includes("es")
-                                    ) {
-                                        url = `${
-                                            window.location.origin
-                                        }${window.location.pathname.slice(
-                                            3,
-                                            window.location.pathname.length
-                                        )}`;
-                                    } else {
-                                        url = `${window.location.origin}${window.location.pathname}`;
-                                    }
-                                    console.log("url: ", url);
-                                }
-                                location.href = url;
-                            };
-
-                            let detectLanguage = () => {
-                                let url = "";
-                                if (
-                                    navigator.languages[0].includes("es") &&
-                                    !window.location.pathname.includes("es")
-                                ) {
-                                    url = `${window.location.origin}/es${window.location.pathname}`;
-                                    location.href = url;
-                                } else if (
-                                    navigator.languages[0].includes("en") &&
-                                    window.location.pathname.includes("es")
-                                ) {
-                                    url = `${
-                                        window.location.origin
-                                    }${window.location.pathname.slice(
-                                        3,
-                                        window.location.pathname.length
-                                    )}`;
-                                    location.href = url;
-                                }
-                                console.log(url);
-                            };
-                            if (!sessionStorage.getItem("language")) {
-                                detectLanguage();
-                            }
-                            english.addEventListener("click", () =>
-                                changeLanguage("en")
-                            );
-                            Spanish.addEventListener("click", () =>
-                                changeLanguage("es")
-                            );
-                        </script>
                     </div>
                 </div>
-                {{- else if .button }}
-                <a href="{{ .url }}" class="navbar-item">
-                    <span
-                        class="button signup-button rounded secondary-btn raised"
-                    >
-                        {{ .title }}
-                    </span>
-                </a>
                 {{- else }}
                 <a href="{{ .url }}" class="navbar-item is-secondary">
                     {{ .title }}
@@ -185,4 +122,87 @@ $navbarLogoHeight := .Site.Params.navbarlogo.height | default 28 }}
             </div>
         </div>
     </div>
+    <script>
+        let english = document.getElementById("English");
+        let lang = document.getElementById("lang");
+        let Spanish = document.getElementById("Spanish");
+        let signup = document.getElementById("signup");
+        lang.previousSibling = signup;
+
+        if (window.location.pathname.includes("es")) {
+            lang.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197593.png" />
+        <span style="margin-left:1em;" > Spanish </span>
+        `;
+        } else {
+            lang.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
+        <span style="margin-left:1em;" > English </span>
+        `;
+        }
+
+        // english.innerHTML = `
+        // <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
+
+        // <span style="margin-left:1em;" > English </span>
+        // `;
+        english.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
+        <span style="margin-left:1em;" > English </span>
+        `;
+        Spanish.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197593.png" />
+        <span style="margin-left:1em;" > Spanish </span>
+        `;
+        let changeLanguage = (code) => {
+            sessionStorage.setItem("language", code);
+            let url = "";
+            if (code == "es") {
+                if (window.location.pathname.includes("es")) {
+                    url = `${window.location.origin}${window.location.pathname}`;
+                } else {
+                    url = `${window.location.origin}/${code}${window.location.pathname}`;
+                }
+            } else if (code == "en") {
+                if (window.location.pathname.includes("es")) {
+                    url = `${
+                        window.location.origin
+                    }${window.location.pathname.slice(
+                        3,
+                        window.location.pathname.length
+                    )}`;
+                } else {
+                    url = `${window.location.origin}${window.location.pathname}`;
+                }
+            }
+            location.href = url;
+        };
+
+        let detectLanguage = () => {
+            let url = "";
+            if (
+                navigator.languages[0].includes("es") &&
+                !window.location.pathname.includes("es")
+            ) {
+                url = `${window.location.origin}/es${window.location.pathname}`;
+                location.href = url;
+            } else if (
+                navigator.languages[0].includes("en") &&
+                window.location.pathname.includes("es")
+            ) {
+                url = `${
+                    window.location.origin
+                }${window.location.pathname.slice(
+                    3,
+                    window.location.pathname.length
+                )}`;
+                location.href = url;
+            }
+        };
+        if (!sessionStorage.getItem("language")) {
+            detectLanguage();
+        }
+        english.addEventListener("click", () => changeLanguage("en"));
+        Spanish.addEventListener("click", () => changeLanguage("es"));
+    </script>
 </nav>

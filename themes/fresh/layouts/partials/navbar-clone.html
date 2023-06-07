@@ -86,12 +86,15 @@ $navbarLogoHeight := .Site.Params.navbarlogo.width | default 28 }}
 
             <div class="navbar-end">
                 {{- range $navbar }} {{- if .sublinks }}
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link"> {{ .title }} </a>
+                <div
+                    style="min-width: 180px"
+                    class="navbar-item has-dropdown is-hoverable"
+                >
+                    <a class="navbar-link" id="langg"> {{ .title }} </a>
 
                     <div class="navbar-dropdown">
                         {{- range .sublinks }}
-                        <a href="{{ .url }}" class="navbar-item">
+                        <a href="{{ .url }}" class="navbar-item drop-link">
                             {{ .title }}
                         </a>
                         {{- end }}
@@ -113,4 +116,57 @@ $navbarLogoHeight := .Site.Params.navbarlogo.width | default 28 }}
             </div>
         </div>
     </div>
+    <script>
+        let newlang = document.getElementById("langg");
+
+        let eng = document.getElementsByClassName("drop-link")[0];
+        let Span = document.getElementsByClassName("drop-link")[1];
+
+        if (window.location.pathname.includes("es")) {
+            newlang.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197593.png" />
+        <span style="margin-left:1em;" > Spanish </span>
+        `;
+        } else {
+            newlang.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
+        <span style="margin-left:1em;" > English </span>
+        `;
+        }
+
+        eng.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
+        <span style="margin-left:1em;" > English </span>
+        `;
+        Span.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/128/197/197593.png" />
+        <span style="margin-left:1em;" > Spanish </span>
+        `;
+        let nchangeLanguage = (code) => {
+            sessionStorage.setItem("language", code);
+            let url = "";
+            if (code == "es") {
+                if (window.location.pathname.includes("es")) {
+                    url = `${window.location.origin}${window.location.pathname}`;
+                } else {
+                    url = `${window.location.origin}/${code}${window.location.pathname}`;
+                }
+            } else if (code == "en") {
+                if (window.location.pathname.includes("es")) {
+                    url = `${
+                        window.location.origin
+                    }${window.location.pathname.slice(
+                        3,
+                        window.location.pathname.length
+                    )}`;
+                } else {
+                    url = `${window.location.origin}${window.location.pathname}`;
+                }
+            }
+            location.href = url;
+        };
+
+        eng.addEventListener("click", () => nchangeLanguage("en"));
+        Span.addEventListener("click", () => nchangeLanguage("es"));
+    </script>
 </nav>
