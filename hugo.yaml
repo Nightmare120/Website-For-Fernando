@@ -18,215 +18,457 @@ markup:
         renderer:
             unsafe: true # Allows you to write raw html in your md files
 
-params:
-    # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
-    openGraph: true
-    # Used as meta data; describe your site to make Google Bots happy
-    description:
-    # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
-    # preloader: false
-    navbarlogo:
-        # Logo (from static/images/logos/___)
-        image: logos/fresh.svg
-        link: /
-        # Default width/height. Uncomment if you need to change
-        # width: 112
-        # height: 28
-    font:
-        name: "Open Sans"
-        sizes: [400, 600]
-    hero:
-        # Main hero title
-        title: Manage. Deploy.
-        # Hero subtitle (optional)
-        subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
-        # Button text
-        buttontext: Get started
-        # Where the main hero button links to
-        buttonlink: "#"
-        # Hero image (from static/images/___)
-        image: illustrations/worker.svg
-        # Footer logos (from static/images/logos/clients/*.svg)
-        # urls are optional
-        clientlogos:
-            - logo: systek
-              url: https://google.com
-            - logo: tribe
-              url: https://stefma.github.io/hugo-fresh/
-            - logo: kromo
-              url: https://github.com/StefMa/hugo-fresh
-            - logo: infinite
-              url: https://hugo-fresh.vercel.app/
-            - logo: gutwork
-              url: https://bulma.io/
-    # Customizable navbar. For a dropdown, add a "sublinks" list.
-    navbar:
-        - title: Home
-          url: /
-        - title: Blog
-          url: /blog
-        - title: Portfolio
-          url: /#portfolio
-        - title: How We Work
-          url: /#how-we-work
-        - title: Testimonials
-          url: /#testimonials
-        # - title: Dropdown
-        #   sublinks:
-        #       - title: Dropdown item
-        #         url: /
-        #       - title: Dropdown item
-        #         url: /
-        #       - title: Dropdown item
-        #         url: /
-        - title: Log in
-          url: /
-        - title: Sign up
-          url: /
-          button: true
-    # sidebar:
-    #     # Logo (from /images/logos/___.svg)
-    #     logo: fresh-square
-    #     sections:
-    #         - title: User
-    #           icon: user
-    #           links:
-    #               - text: Profile
-    #                 url: /
-    #               - text: Account
-    #                 url: /
-    #               - text: Settings
-    #                 url: /
-    #         - title: Messages
-    #           icon: envelope
-    #           links:
-    #               - text: Inbox
-    #                 url: /
-    #               - text: Compose
-    #                 url: /
-    #         - title: Images
-    #           icon: image
-    #           links:
-    #               - text: Library
-    #                 url: /
-    #               - text: Upload
-    #                 url: /
-    #         - title: Settings
-    #           icon: cog
-    #           links:
-    #               - text: User settings
-    #                 url: /
-    #               - text: App settings
-    #                 url: /
-    section1:
-        title: Great power comes
-        subtitle: with great responsibility
-        tiles:
-            - title: App builder
-              icon: mouse-globe
-              text: This is some explanatory text that is on two rows
-              url: /portfolio/portfolio1
-              buttonText: Free trial
-            - title: Cloud integration
-              icon: laptop-cloud
-              text: This is some explanatory text that is on two rows
-              url: /portfolio/portfolio2
-              buttonText: Get started
-            - title: Add-ons & plugins
-              icon: plug-cloud
-              text: This is some explanatory text that is on two rows
-              url: /portfolio/portfolio3
-              buttonText: Get started
-    section2:
-        title: You're here because you want the best
-        subtitle: And we know it
-        features:
-            - title: Powerful and unified interface
-              text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              # Icon (from /images/illustrations/icons/___.svg)
-              icon: laptop-globe
-            - title: Cross-device synchronisation
-              text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              icon: doc-sync
-            - title: Nomad system
-              text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              icon: mobile-feed
-    section3:
-        title: One platform
-        subtitle: To rule them all
-        image: illustrations/mockups/app-mockup.png
-        buttonText: Get started
-        buttonLink: "#"
-    section4:
-        title: Our Clients love us!
-        subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
-        clients:
-            - name: Irma Walters
-              quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-              job: Accountant
-              img: 1
-            - name: John Bradley
-              quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-              job: Financial Analyst
-              img: 2
-            - name: Gary Blackman
-              quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-              job: HR Manager
-              img: 3
-    section5:
-        title: Drop us a line or two
-        subtitle: We'd love to hear from you
-        buttonText: Send Message
-        # action: https://formspree.io/f/<form_id>
-        # method: POST
-    footer:
-        # Logo (from /images/logos/___)
-        logo: fresh-white-alt.svg
-        # Social Media Title
-        socialmediatitle: Follow Us
-        # Social media links (GitHub, Twitter, etc.). All are optional.
-        socialmedia:
-            - link: https://github.com/lucperkins/github-fresh
-              # Icons are from Font Awesome
-              icon: github
-            - link: https://dribbble.com/#
-              icon: dribbble
-            - link: https://facebook.com/#
-              icon: facebook
-            - link: https://twitter.com/lucperkins
-              icon: twitter
-            - link: https://bitbucket.org/#
-              icon: bitbucket
-        bulmalogo: true
-        quicklinks:
-            column1:
-                title: "Product"
-                links:
-                    - text: Discover features
-                      link: /
-                    - text: Why choose our product?
-                      link: /
-                    - text: Compare features
-                      link: /
-                    - text: Our roadmap
-                      link: /
-                    - text: AGB
-                      link: /agb
-            column2:
-                title: "Docs"
-                links:
-                    - text: Get started
-                      link: /
-                    - text: User guides
-                      link: /
-                    - text: Admin guide
-                      link: /
-                    - text: Developers
-                      link: /
-            column3:
-                title: "Blog"
-                links:
-                    - text: Latest news
-                      link: /blog/first
-                    - text: Tech articles
-                      link: /blog/second
+copyright: Everything is mine
+defaultContentLanguage: en
+
+languages:
+    en:
+        params:
+            # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+            openGraph: true
+            # Used as meta data; describe your site to make Google Bots happy
+            description:
+            # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+            # preloader: false
+            navbarlogo:
+                # Logo (from static/images/logos/___)
+                image: logos/fresh.svg
+                link: /
+                # Default width/height. Uncomment if you need to change
+                # width: 112
+                # height: 28
+            font:
+                name: "Open Sans"
+                sizes: [400, 600]
+            hero:
+                # Main hero title
+                title: Manage. Deploy.
+                # Hero subtitle (optional)
+                subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
+                # Button text
+                buttontext: Get started
+                # Where the main hero button links to
+                buttonlink: "#"
+                # Hero image (from static/images/___)
+                image: illustrations/worker.svg
+                # Footer logos (from static/images/logos/clients/*.svg)
+                # urls are optional
+                clientlogos:
+                    - logo: systek
+                      url: https://google.com
+                    - logo: tribe
+                      url: https://stefma.github.io/hugo-fresh/
+                    - logo: kromo
+                      url: https://github.com/StefMa/hugo-fresh
+                    - logo: infinite
+                      url: https://hugo-fresh.vercel.app/
+                    - logo: gutwork
+                      url: https://bulma.io/
+            # Customizable navbar. For a dropdown, add a "sublinks" list.
+            navbar:
+                - title: Home
+                  url: /
+                - title: Blog
+                  url: /blog
+                - title: Portfolio
+                  url: /#portfolio
+                - title: How We Work
+                  url: /#how-we-work
+                - title: Testimonials
+                  url: /#testimonials
+                - title: Language
+                  sublinks:
+                      - title: English
+                        url: /
+                      - title: Spanish
+                        url: /es
+                - title: Sign up
+                  url: /
+                  button: true
+            # sidebar:
+            #     # Logo (from /images/logos/___.svg)
+            #     logo: fresh-square
+            #     sections:
+            #         - title: User
+            #           icon: user
+            #           links:
+            #               - text: Profile
+            #                 url: /
+            #               - text: Account
+            #                 url: /
+            #               - text: Settings
+            #                 url: /
+            #         - title: Messages
+            #           icon: envelope
+            #           links:
+            #               - text: Inbox
+            #                 url: /
+            #               - text: Compose
+            #                 url: /
+            #         - title: Images
+            #           icon: image
+            #           links:
+            #               - text: Library
+            #                 url: /
+            #               - text: Upload
+            #                 url: /
+            #         - title: Settings
+            #           icon: cog
+            #           links:
+            #               - text: User settings
+            #                 url: /
+            #               - text: App settings
+            #                 url: /
+            section1:
+                title: Great power comes
+                subtitle: with great responsibility
+                tiles:
+                    - title: Family Monitor App
+                      icon: mouse-globe
+                      text: An application to monitor the 👨‍👩‍👧‍👦 family members, both location and mobile activity
+                      url: /portfolio/portfolio1
+
+                    - title: Dating App
+                      icon: laptop-cloud
+                      text: 📱💘👫 App designed to connect 🫂 people based on their common interests, preferences or location ...
+                      url: /portfolio/portfolio2
+
+                    - title: Nutrition Control App
+                      icon: plug-cloud
+                      text: 📱🥗💪 This Nutrition Control App was designed for helping users to track and manage their food intake and physical activity.
+                      url: /portfolio/portfolio3
+
+                    - title: Coupon App
+                      icon: mouse-globe
+                      text: An application to monitor the 👨‍👩‍👧‍👦 family members, both location and mobile activity ...
+                      url: /portfolio/portfolio4
+
+                    - title: Social Network App
+                      icon: laptop-cloud
+                      text: 📱🌍📸 A Social Network App is a mobile application that enables users to share content, including photos, videos, and text, among a network of friends or followers.
+                      url: /portfolio/portfolio5
+
+                    - title: Travel and Tourism App
+                      icon: plug-cloud
+                      text: 📱🌍🗺️ This Travel and Tour Advisor App assists users in planning and customizing their trips. The app provides recommendations on destinations
+                      url: /portfolio/portfolio6
+
+            section2:
+                title: You're here because you want the best
+                subtitle: And we know it
+                features:
+                    - title: Powerful and unified interface
+                      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      # Icon (from /images/illustrations/icons/___.svg)
+                      icon: laptop-globe
+                    - title: Cross-device synchronisation
+                      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      icon: doc-sync
+                    - title: Nomad system
+                      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      icon: mobile-feed
+            section3:
+                title: One platform
+                subtitle: To rule them all
+                image: illustrations/mockups/app-mockup.png
+                buttonText: Get started
+                buttonLink: "#"
+            section4:
+                title: Our Clients love us!
+                subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+                clients:
+                    - name: Irma Walters
+                      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                      job: Accountant
+                      img: 1
+                    - name: John Bradley
+                      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                      job: Financial Analyst
+                      img: 2
+                    - name: Gary Blackman
+                      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                      job: HR Manager
+                      img: 3
+            section5:
+                title: Drop us a line or two
+                subtitle: We'd love to hear from you
+                buttonText: Send Message
+                # action: https://formspree.io/f/<form_id>
+                # method: POST
+            footer:
+                # Logo (from /images/logos/___)
+                logo: fresh-white-alt.svg
+                # Social Media Title
+                socialmediatitle: Follow Us
+                # Social media links (GitHub, Twitter, etc.). All are optional.
+                socialmedia:
+                    - link: https://github.com/lucperkins/github-fresh
+                      # Icons are from Font Awesome
+                      icon: github
+                    - link: https://dribbble.com/#
+                      icon: dribbble
+                    - link: https://facebook.com/#
+                      icon: facebook
+                    - link: https://twitter.com/lucperkins
+                      icon: twitter
+                    - link: https://bitbucket.org/#
+                      icon: bitbucket
+                bulmalogo: true
+                quicklinks:
+                    column1:
+                        title: "Product"
+                        links:
+                            - text: Discover features
+                              link: /
+                            - text: Why choose our product?
+                              link: /
+                            - text: Compare features
+                              link: /
+                            - text: Our roadmap
+                              link: /
+                            - text: AGB
+                              link: /agb
+                    column2:
+                        title: "Docs"
+                        links:
+                            - text: Get started
+                              link: /
+                            - text: User guides
+                              link: /
+                            - text: Admin guide
+                              link: /
+                            - text: Developers
+                              link: /
+                    column3:
+                        title: "Blog"
+                        links:
+                            - text: Latest news
+                              link: /blog/first
+                            - text: Tech articles
+                              link: /blog/second
+    es:
+        params:
+            # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+            openGraph: true
+            # Used as meta data; describe your site to make Google Bots happy
+            description:
+            # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+            # preloader: false
+            navbarlogo:
+                # Logo (from static/images/logos/___)
+                image: logos/fresh.svg
+                link: /
+                # Default width/height. Uncomment if you need to change
+                # width: 112
+                # height: 28
+            font:
+                name: "Open Sans"
+                sizes: [400, 600]
+            hero:
+                # Main hero title
+                title: Administrar. Desplegar.
+                # Hero subtitle (optional)
+                subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
+                # Button text
+                buttontext: Empezar
+                # Where the main hero button links to
+                buttonlink: "#"
+                # Hero image (from static/images/___)
+                image: illustrations/worker.svg
+                # Footer logos (from static/images/logos/clients/*.svg)
+                # urls are optional
+                clientlogos:
+                    - logo: systek
+                      url: https://google.com
+                    - logo: tribe
+                      url: https://stefma.github.io/hugo-fresh/
+                    - logo: kromo
+                      url: https://github.com/StefMa/hugo-fresh
+                    - logo: infinite
+                      url: https://hugo-fresh.vercel.app/
+                    - logo: gutwork
+                      url: https://bulma.io/
+            # Customizable navbar. For a dropdown, add a "sublinks" list.
+            navbar:
+                - title: Hogar
+                  url: /es
+                - title: Blog
+                  url: /es/blog/
+                - title: portafolio
+                  url: /es/#portfolio
+                - title: Cómo trabajamos
+                  url: /es/#how-we-work
+                - title: Testimonios
+                  url: /es/#testimonials
+                - title: Idioma
+                  sublinks:
+                      - title: English
+                        url: /
+                      - title: Spanish
+                        url: /es
+                # - title: Log in
+                #   url: /
+                - title: Sign up
+                  url: /
+                  button: true
+            # sidebar:
+            #     # Logo (from /images/logos/___.svg)
+            #     logo: fresh-square
+            #     sections:
+            #         - title: User
+            #           icon: user
+            #           links:
+            #               - text: Profile
+            #                 url: /
+            #               - text: Account
+            #                 url: /
+            #               - text: Settings
+            #                 url: /
+            #         - title: Messages
+            #           icon: envelope
+            #           links:
+            #               - text: Inbox
+            #                 url: /
+            #               - text: Compose
+            #                 url: /
+            #         - title: Images
+            #           icon: image
+            #           links:
+            #               - text: Library
+            #                 url: /
+            #               - text: Upload
+            #                 url: /
+            #         - title: Settings
+            #           icon: cog
+            #           links:
+            #               - text: User settings
+            #                 url: /
+            #               - text: App settings
+            #                 url: /
+            section1:
+                title: Viene un gran poder
+                subtitle: con gran responsabilidad
+                tiles:
+                    - title: Aplicación Monitor familiar
+                      icon: mouse-globe
+                      text: Una aplicación para monitorear a los 👨‍👩‍👧‍👦 miembros de la familia, tanto ubicación como actividad móvil
+                      url: /es/portfolio/portfolio1
+
+                    - title: Aplicación de citas
+                      icon: laptop-cloud
+                      text: 📱💘👫 App diseñada para conectar    personas en función de sus intereses comunes, preferencias o ubicación...
+                      url: /es/portfolio/portfolio2
+
+                    - title: Aplicación de Control Nutricional
+                      icon: plug-cloud
+                      text: 📱🥗💪 Esta aplicación de control de nutrición fue diseñada para ayudar a los usuarios a rastrear y administrar su ingesta de alimentos y actividad física.
+                      url: /es/portfolio/portfolio3
+
+                    - title: Aplicación de cupones
+                      icon: mouse-globe
+                      text: Una aplicación para monitorear a los 👨‍👩‍👧‍👦 miembros de la familia, tanto ubicación como actividad móvil...
+                      url: /es/portfolio/portfolio4
+
+                    - title: Aplicación de red social
+                      icon: laptop-cloud
+                      text: 📱🌍📸 Una aplicación de red social es una aplicación móvil que permite a los usuarios compartir contenido, incluidas fotos, videos y texto, entre una red de amigos o seguidores.
+                      url: /es/portfolio/portfolio5
+
+                    - title: Aplicación de viajes y turismo
+                      icon: plug-cloud
+                      text: 📱🌍🗺️ Esta aplicación Travel and Tour Advisor ayuda a los usuarios a planificar y personalizar sus viajes. La aplicación ofrece recomendaciones sobre destinos.
+                      url: /es/portfolio/portfolio6
+
+            section2:
+                title: Estas aqui porque quieres la mejor
+                subtitle: Y la sabemos
+                features:
+                    - title: Interfaz potente y unificada
+                      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      # Icon (from /images/illustrations/icons/___.svg)
+                      icon: laptop-globe
+                    - title: Sincronización entre dispositivos
+                      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      icon: doc-sync
+                    - title: sistema nómada
+                      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      icon: mobile-feed
+            section3:
+                title: Una plataforma
+                subtitle: Para gobernarlos a todos
+                image: illustrations/mockups/app-mockup.png
+                buttonText: Empezar
+                buttonLink: "#"
+            section4:
+                title: ¡Nuestros Clientes nos aman!
+                subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+                clients:
+                    - name: Irma Walters
+                      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                      job: Contador
+                      img: 1
+                    - name: John Bradley
+                      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                      job: Analista financiero
+                      img: 2
+                    - name: Gary Blackman
+                      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                      job: Gerente de Recursos Humanos
+                      img: 3
+            section5:
+                title: Déjanos una línea o dos
+                subtitle: Nos encantaría saber de usted
+                buttonText: Enviar mensaje
+                # action: https://formspree.io/f/<form_id>
+                # method: POST
+            footer:
+                # Logo (from /images/logos/___)
+                logo: fresh-white-alt.svg
+                # Social Media Title
+                socialmediatitle: Síganos
+                # Social media links (GitHub, Twitter, etc.). All are optional.
+                socialmedia:
+                    - link: https://github.com/lucperkins/github-fresh
+                      # Icons are from Font Awesome
+                      icon: github
+                    - link: https://dribbble.com/#
+                      icon: dribbble
+                    - link: https://facebook.com/#
+                      icon: facebook
+                    - link: https://twitter.com/lucperkins
+                      icon: twitter
+                    - link: https://bitbucket.org/#
+                      icon: bitbucket
+                bulmalogo: true
+                quicklinks:
+                    column1:
+                        title: "Producto"
+                        links:
+                            - text: Descubre funciones
+                              link: /es/
+                            - text: Why choose our product?
+                              link: /es/
+                            - text: Compara características
+                              link: /
+                            - text: Nuestra hoja de ruta
+                              link: /
+                            - text: AGB
+                              link: /agb
+                    column2:
+                        title: "Documentos"
+                        links:
+                            - text: Get started
+                              link: /
+                            - text: User guides
+                              link: /
+                            - text: Admin guide
+                              link: /
+                            - text: Developers
+                              link: /
+                    column3:
+                        title: "Blog"
+                        links:
+                            - text: Latest news
+                              link: /blog/first
+                            - text: Tech articles
+                              link: /blog/second

@@ -1,8 +1,17 @@
 {{ define "main" }}{{ partial "navbar.html" . }} {{ partial "navbar-clone.html"
 . }}
 
+<style>
+    @media only screen and (min-width: 1024px) {
+        #container {
+            width: 70%;
+            margin: auto;
+        }
+    }
+</style>
+
 <section class="section is-medium">
-    <div class="container">
+    <div id="container" class="container">
         <div class="columns">
             <div class="column is-centered-tablet-portrait">
                 <h1 style="font-size: 2.5em" class="title section-title">
@@ -30,15 +39,26 @@
                         >{{ .Date.Format "Mon, Jan 2, 2006" }}</time
                     >
                 </h3>
-                <p style="line-height: 1.7em; color: grey">{{.Summary}}</p>
+                <p style="line-height: 1.7em; color: grey; font-size: 18px">
+                    {{.Summary}}
+                </p>
                 <a
                     href="{{.Permalink}}"
-                    class="button signup-button rounded secondary-btn raised"
+                    class="button signup-button rounded secondary-btn raised read-more"
                 >
                     Read More.
                 </a>
             </div>
             {{ end }}
+            <script>
+                if (window.location.pathname.includes("es")) {
+                    let readMore = document.getElementsByClassName("read-more");
+                    for (let index = 0; index < readMore.length; index++) {
+                        const element = readMore[index];
+                        element.innerHTML = "Leer más";
+                    }
+                }
+            </script>
         </div>
     </div>
 </section>

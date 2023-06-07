@@ -8,9 +8,16 @@
         .content p {
             line-height: 1.7em;
         }
+
+        @media only screen and (min-width: 1024px) {
+            #container {
+                width: 70%;
+                margin: auto;
+            }
+        }
     </style>
 
-    <div class="container">
+    <div id="container" class="container">
         <div class="columns">
             <div class="column is-centered-tablet-portrait">
                 <h1 style="font-size: 2.5em" class="title section-title">
@@ -21,6 +28,8 @@
             </div>
         </div>
 
-        <div class="content">{{ .Content }}</div>
+        <div style="font-size: 1.2em; margin: auto" class="content">
+            {{ .Content }}
+        </div>
     </div>
 </section>

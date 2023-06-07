@@ -1,36 +1,81 @@
-{{- $section1 := .Site.Params.section1 }}
-{{- $title    := index $section1 "title" }}
-{{- $subtitle := index $section1 "subtitle" }}
-{{- $tiles    := index $section1 "tiles" }}
+{{- $section1 := .Site.Params.section1 }} {{- $title := index $section1 "title"
+}} {{- $subtitle := index $section1 "subtitle" }} {{- $tiles := index $section1
+"tiles" }}
 <section class="section section-feature-grey is-medium" id="section1">
-  <div class="container">
-    <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
-      <div class="divider is-centered"></div>
-    </div>
-
-    <div class="content-wrapper">
-      <div class="columns">
-        {{- range $tiles }}
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>{{ .title }}</h4>
-            </div>
-            <div class="card-icon">
-                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </div>
-            <div class="card-text">
-                <p>{{ .text }}</p>
-            </div>
-            <div class="card-action">
-              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
-            </div>
-          </div>
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">{{ $title }}</h2>
+            <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+            <div class="divider is-centered"></div>
         </div>
-        {{- end }}
-      </div>
+
+        <style>
+            @media only screen and (min-width: 768px) {
+                #portfolio-wrapper {
+                    flex-wrap: wrap;
+                    gap: 2em;
+                    align-items: stretch;
+                    justify-content: stretch;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                #portfolio-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2em;
+                    flex-direction: column;
+                }
+            }
+        </style>
+
+        <div class="content-wrapper">
+            <div id="portfolio-wrapper" class="columns">
+                <!-- <div class="column is-one-third"> -->
+                {{- range $tiles }}
+                <div
+                    style="height: auto; padding: 0.5em !important"
+                    class="feature-card is-bordered has-text-centered revealOnScroll delay-1"
+                    data-animation="fadeInLeft"
+                >
+                    <div class="card-title">
+                        <h4>{{ .title }}</h4>
+                    </div>
+                    <div class="card-icon">
+                        <img src="{{ printf "/images/illustrations/icons/%s.svg"
+                        .icon | relURL }}">
+                    </div>
+                    <div class="card-text">
+                        <p
+                            style="
+                                line-height: 1.7em;
+                                text-align: center;
+                                color: grey;
+                            "
+                        >
+                            {{ .text }}
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a
+                            href="{{ .url }}"
+                            class="button btn-align-md accent-btn raised read-more"
+                            >Read More</a
+                        >
+                    </div>
+                </div>
+                {{- end }}
+                <script>
+                    if (window.location.pathname.includes("es")) {
+                        let readMore =
+                            document.getElementsByClassName("read-more");
+                        for (let index = 0; index < readMore.length; index++) {
+                            const element = readMore[index];
+                            element.innerHTML = "Leer más";
+                        }
+                    }
+                </script>
+                <!-- </div> -->
+            </div>
+        </div>
     </div>
-  </div>
 </section>

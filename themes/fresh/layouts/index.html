@@ -8,11 +8,11 @@ end }}
     {{ if .Site.Params.section2 }} {{ partial "section2.html" . }} {{ end }}
 </div>
 
+{{ if .Site.Params.section3 }} {{ partial "section3.html" . }} {{ end }}
 <div id="testimonials">
-    {{ if .Site.Params.section3 }} {{ partial "section3.html" . }} {{ end }}
+    {{ if .Site.Params.section4 }} {{ partial "section4.html" . }} {{ end }}
 </div>
 
-{{ if .Site.Params.section4 }} {{ partial "section4.html" . }} {{ end }} {{ if
-.Site.Params.section5 }} {{ partial "section5.html" . }} {{ end }} {{ if
+{{ if .Site.Params.section5 }} {{ partial "section5.html" . }} {{ end }} {{ if
 .Site.Params.footer }} {{ partial "footer.html" . }} {{ end }} {{ if
 .Site.Params.sidebar }} {{ partial "sidebar.html" . }} {{ end }} {{ end }}
